@@ -18,7 +18,7 @@ def get_ip_address(ifname):
         except ValueError:
             return None
     elif platform.system() == "Windows":
-        from tools.win_ifname import win_from_name_get_id
+        from win_ifname import win_from_name_get_id
         if_id = win_from_name_get_id(ifname)
         if not if_id:
             return
